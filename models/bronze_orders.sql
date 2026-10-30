@@ -1,3 +1,3 @@
 select 
 * 
-from Raw_Files_Lakehouse.landing.orders
+from dbt_warehouse.dbo.orders
