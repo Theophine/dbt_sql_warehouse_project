@@ -1,0 +1,12 @@
+sources:
+  - name: dbo
+    database: dbt_warehouse
+    schema: dbo
+    tables:
+      - name: orders
+      - name: products
+      - name: reviews
+      - name: users
+
+
+  

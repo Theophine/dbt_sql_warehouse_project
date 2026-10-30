@@ -1,3 +1,3 @@
 select 
 * 
-from dbt_warehouse.dbo.orders
+from {{ source('dbo', 'orders')}}
