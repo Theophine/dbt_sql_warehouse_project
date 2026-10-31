@@ -8,3 +8,4 @@ source
 from 
 {{ ref("bronze_users")}} 
 
+
