@@ -2,6 +2,12 @@ sources:
   - name: dbo
     database: dbt_warehouse
     schema: dbo
+    freshness:
+      warn_after:
+        count: 3300
+        period: day
+    loaded_at_field: created_at
+
     tables:
       - name: orders
       - name: products
