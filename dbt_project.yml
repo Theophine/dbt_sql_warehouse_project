@@ -47,7 +47,12 @@ models:
         +materialized: table
         +schema: silver
       gold:
-        +materialized: view
+        +materialized: view 
         +schema: gold
+      
     views:
       +materialized: view
+seeds:
+  dbt_fabric_warehouse_project:
+    +schema: bronze
+
