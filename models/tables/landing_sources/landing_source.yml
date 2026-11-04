@@ -9,6 +9,7 @@ sources:
     loaded_at_field: created_at
 
     tables:
+      - name: orders_incremental
       - name: orders
       - name: products
       - name: reviews
