@@ -1,0 +1,8 @@
+snapshots:
+  - name: products_snapshot
+    relation: source('dbo', 'products')
+    config:
+      schema: bronze
+      unique_key: id
+      strategy: timestamp
+      updated_at: created_at

@@ -1,8 +1,8 @@
 
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
-name: 'my_new_project'
+# name or the intended use of these models 
+name: 'dbt_fabric_warehouse_project'
 version: '1.0.0'
 config-version: 2
 
@@ -35,8 +35,24 @@ clean-targets:         # directories to be removed by `dbt clean`
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
-models:
-  my_new_project:
+models: 
+  dbt_fabric_warehouse_project:
+    #+materialized: table #default config behaviour
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    tables:
+      bronze:
+        +materialized: table 
+        +schema: bronze
+      silver: 
+        +materialized: table
+        +schema: silver
+      gold:
+        +materialized: view 
+        +schema: gold
+      
+    views:
+      +materialized: view
+seeds:
+  dbt_fabric_warehouse_project:
+    +schema: bronze
+
