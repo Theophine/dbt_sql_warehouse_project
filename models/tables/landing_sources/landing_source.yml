@@ -3,7 +3,7 @@ sources:
     database: |
       {%- if  target.name == "dev" -%} dbt_warehouse
       {%- elif target.name == "prod"  -%} dbt_prod_warehouse
-      {%- else -%} dbt_warehouse
+      {%- else -%} invalid_database
       {%- endif -%}
     schema: dbo
     freshness:
