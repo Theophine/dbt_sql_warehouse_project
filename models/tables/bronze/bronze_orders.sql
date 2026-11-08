@@ -8,5 +8,5 @@
 
 select 
 * 
-from {{ source('dbo', 'orders_incremental')}}
+from {{ source('dbo', 'orders')}}
 
