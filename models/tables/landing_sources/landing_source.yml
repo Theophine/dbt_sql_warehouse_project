@@ -1,10 +1,7 @@
 sources:
   - name: dbo
-    database: |
-      {%- if  target.name == "dev" -%} dbt_warehouse
-      {%- elif target.name == "prod"  -%} dbt_prod_warehouse
-      {%- else -%} invalid_database
-      {%- endif -%}
+    database: 
+     "{{ env_var('DBT_DATABASE') }}"
     schema: dbo
     freshness:
       warn_after:
