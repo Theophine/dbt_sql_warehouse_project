@@ -1,7 +1,7 @@
 sources:
   - name: dbo
     database: 
-     "{{ env_var('DBT_CATALOG') }}"
+     "{{ env_var('DBT_DATABASE') }}"
     schema: dbo
     freshness:
       warn_after:
